@@ -6,6 +6,7 @@
     <title>Ex Ante Informations</title>
     <link rel="stylesheet" href="style1.css">
     <link rel="icon" href="images/LogoLarge.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
 </head>
 <body>
     <div id="overlay">
@@ -33,7 +34,7 @@
     <main>
         <section id="section1" class="section">
             <div id="section1-content">
-                <p id="s1-p1">Pioneers in financial engineering.</p>
+                <p id="s1-p1">Pioneering in financial engineering.</p>
                 <div id="s1-p2-1"><a id="s1-p2-2" href="Our_goals/index.html" target="_self" title="Our Goals">Check out what we do.</a></div>
             </div>
         </section>
@@ -44,19 +45,19 @@
                         <div id="s2-topic1">
                             <div id="gif1-1"><img id="gif1-2" src="icons/line-graph.png" alt="Be patient..."></div>
                             <div>
-                                <p id="text1">Using advanced mathematical and statistical methods for investing.</p>
+                                <p id="text1">Using advanced mathematical and statistical methods for financial analysis. Exploring cause and effect.</p>
                             </div>
                         </div>
                         <div id="s2-topic2">
                             <div id="gif2-1"><img id="gif2-2" src="icons/economics.png" alt="Be patient..."></div>
                             <div>
-                                <p id="text2">Developing and implementing new methods into stock markets.</p>
+                                <p id="text2">Developing for and implementing new methods into markets. Benefiting from alternative Investments.</p>
                             </div>
                         </div>
                         <div id="s2-topic3">
                             <div id="gif3-1"><img id="gif3-2" src="icons/planning.png" alt="Be patient..."></div>
                             <div>
-                                <p id="text3">Increasing knowledge and improving quantitative and qualitative skills.</p>
+                                <p id="text3">Increasing, manifesting, and deepening knowledge. Improving quantitative and qualitative skills.</p>
                             </div>
                         </div>
                     </div>
@@ -80,7 +81,40 @@
             </div>
         </section>
         <section id="section3" class="section">
-            
+            <div id="s3-container">
+                <div id="code-container">
+                    <pre id="pre-code">
+                        <code id="code-content">
+    def simulate_stock_prices(initial_prices, expected_returns, volatilities, correlations, time_horizon):
+        &quot;np.random.seed(42)  # Set seed for reproducibility&quot;
+        num_assets = len(initial_prices)
+        num_steps = int(time_horizon)
+
+        # Convert volatilities to Numpy array
+        volatilities = np.array(volatilities)
+        
+        stock_prices = np.zeros((num_steps + 1, num_assets))
+        stock_prices[0, :] = initial_prices
+
+        z = np.random.normal(0, 1, size=(num_steps, num_assets))
+
+        for j in range(1, num_steps + 1):
+            for k in range(num_assets):
+                stock_prices[j, k] = stock_prices[j - 1, k] * (1+(expected_returns[k] + volatilities[k]
+                     * (correlations[k] * z[j-1,0] + z[j-1,k]*(1-correlations[k]**2)**0.5)))
+            &quot;&quot;&quot;
+            1. calculate the stock price for t by looking at the value for t-1
+            2. multiply the prior day's stock price with 
+            &quot;&quot;&quot;
+    return stock_prices
+                        </code>
+                    </pre>
+                </div>
+                <div id="visual-container">
+                    <img id="visual1" src="images/Visual1.png" alt="Be patient...">
+                </div>
+
+            </div>
         </section>
     </main>
     <footer>
@@ -94,9 +128,9 @@
             </ul>
         </nav>
         <div class="footer-info">
-            <p>Geschwister-Scholl-Platz 1, 80539 Munich</p>
-            <p>info@exanteinformations.com</p>
-            <p>© 2024 Ex Ante Informations e.V.</p>
+            <p>No address</p>
+            <p>No mail</p>
+            <p>© 2024 Ex Ante Informations</p>
         </div>
     </footer>
 
@@ -128,5 +162,7 @@
             x.classList.toggle("change");
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>

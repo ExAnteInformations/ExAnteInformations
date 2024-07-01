@@ -240,6 +240,42 @@ header {
     width: 100px;
 }
 
+
+#section3 {
+    background-image: url(images/Code1.png);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+#s3-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+#code-container {
+
+}
+
+#visual-container {
+    padding-left: 20px;
+}
+
+#visual-container img {
+    width: 500px;
+    margin-top: 28px;
+}
+
+#code-content {
+    width: 850px;
+    height: 352px;
+}
+
+
 footer {
     background-color: black;
     color: lightgrey;
