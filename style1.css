@@ -170,7 +170,7 @@ header {
 }
 
 #section1 {
-    background-image: url(/images/Section1-bg.jpeg);
+    background-image: url(images/Section1-bg.jpeg);
     background-position: center center;
     background-size: cover;
     height: 100vh;
